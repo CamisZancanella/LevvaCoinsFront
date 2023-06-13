@@ -22,7 +22,7 @@ export function SearchForm(){
     })
 
     const handleSearch = ({search}:formData) =>{
-        SearchTransactionUseCase.execute(search)
+        SearchTransactionUseCase.execute(search?.trim())
     }
     return(
         <SearchFormContainer onSubmit={handleSubmit(handleSearch)}>
